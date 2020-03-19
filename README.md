@@ -1,1 +1,2 @@
-# CS547_Spring_2020
+# CS 547 - Secure Systems and Programs
+## Secure Systems and Programs
