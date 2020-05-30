@@ -17,28 +17,28 @@ provider:
         - dynamodb:DeleteItem
       Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DYNAMODB_TABLE}"
 
-functions:
-  create:
-    handler: functions/create.create
-    events:
-      - http:
-          path: todos
-          method: post
-          cors: true
-  read:
-    handler: functions/read.read
-    events:
-      - http:
-          path: todos
-          method: get
-          cors: true
-  update:
-    handler: functions/update.update
-    events:
-      - http:
-          path: todos/{id}
-          method: put
-          cors: true
+# functions:
+#   create:
+#     handler: functions/create.create
+#     events:
+#       - http:
+#           path: todos
+#           method: post
+#           cors: true
+#   read:
+#     handler: functions/read.read
+#     events:
+#       - http:
+#           path: todos
+#           method: get
+#           cors: true
+#   update:
+#     handler: functions/update.update
+#     events:
+#       - http:
+#           path: todos/{id}
+#           method: put
+#           cors: true
 
 resources:
   Resources:
